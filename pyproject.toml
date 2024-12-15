@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instalam"
+version = "0.0.1"
+description = "A simple implementation of ranked voting elections with the instant runoff method."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    {name = "Carlo A. Furia", email = "furiac@usi.ch"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pandas"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/atom-sw/instalam"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests"]
+
+[project.scripts]
+instalam = "instalam.instalam:main"
