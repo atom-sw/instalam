@@ -467,7 +467,7 @@ class Election:
                       ', '.join([str(c) for c in most_voted]))
                 return most_voted
             print("\nThe top-preference candidate"
-                  f"{'s don''t' if len(most_voted) > 1 else ' does not'} have absolute majority.")
+                  f"{'s do' if len(most_voted) > 1 else ' does'} not have absolute majority.")
             least_voted, _ = self.bottom_candidates()
             print(f"\n{'Tied candidates' if len(least_voted) > 1 else 'Candidate'} "
                   f"with the least preferences: {', '.join([str(c) for c in least_voted])}")
